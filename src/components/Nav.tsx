@@ -132,7 +132,17 @@ interface NavItem {
 }
 
 interface NavProps {
-	activeHref: '/' | '/about' | '/commands' | '/commands' | '/leaderboards' | '/stats' | '/login' | 'none';
+	activeHref:
+		| '/'
+		| '/about'
+		| '/commands'
+		| '/commands'
+		| '/leaderboards'
+		| '/stats'
+		| '/login'
+		| '/privacy'
+		| '/terms'
+		| 'none';
 }
 
 const NavItems: Array<NavItem> = [

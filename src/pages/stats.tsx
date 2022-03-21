@@ -4,7 +4,7 @@ import { Meta } from '../components/Meta';
 import { WIP } from '../components/WIP';
 import { Footer } from '../components/Footer';
 
-const Login: NextPage = () => {
+const Stats: NextPage = () => {
 	return (
 		<>
 			<Meta />
@@ -15,4 +15,4 @@ const Login: NextPage = () => {
 	);
 };
 
-export default Login;
+export default Stats;

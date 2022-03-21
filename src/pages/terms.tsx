@@ -1,13 +1,17 @@
 import { NextPage } from 'next';
-import { Flex, Text } from '@chakra-ui/react';
+import { Nav } from '../components/Nav';
+import { Meta } from '../components/Meta';
+import { WIP } from '../components/WIP';
+import { Footer } from '../components/Footer';
 
 const Terms: NextPage = () => {
 	return (
-		<Flex justifyContent="center" alignItems="center" flexDirection="column" p={30} pt={125} textAlign="center">
-			<Text fontSize="3xl" fontWeight="bold" pb={5}>
-				Work in Progress
-			</Text>
-		</Flex>
+		<>
+			<Meta />
+			<Nav activeHref="/terms" />
+			<WIP />
+			<Footer />
+		</>
 	);
 };
 
