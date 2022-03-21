@@ -1,0 +1,6 @@
+/* Hero Text Gradient */
+.textGradient {
+	background: linear-gradient(to right, #3196e2, #4b43d7 80%);
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+}

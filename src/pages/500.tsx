@@ -6,7 +6,7 @@ import { HomeButton } from '../components/HomeButton';
 const Custom500: NextPage = () => {
 	return (
 		<>
-			<Nav />
+			<Nav activeHref="none" />
 			<Flex justifyContent="center" alignItems="center" height="90vh" flexDirection="column">
 				<Text fontWeight="semibold" fontSize="3xl" textAlign="center">
 					Uh oh. Something went wrong on our end. Please try again.

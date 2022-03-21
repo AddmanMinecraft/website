@@ -6,7 +6,7 @@ import { HomeButton } from '../components/HomeButton';
 const Custom404: NextPage = () => {
 	return (
 		<>
-			<Nav />
+			<Nav activeHref="none" />
 			<Container>
 				<Flex justifyContent="center" alignItems="center" height="90vh" flexDirection="column">
 					<Text fontWeight="semibold" fontSize="3xl" textAlign="center">

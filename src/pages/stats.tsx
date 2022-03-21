@@ -1,18 +1,18 @@
 import { NextPage } from 'next';
 import { Nav } from '../components/Nav';
 import { Meta } from '../components/Meta';
-import { Hero } from '../components/Hero';
+import { WIP } from '../components/WIP';
 import { Footer } from '../components/Footer';
 
-const Index: NextPage = () => {
+const Login: NextPage = () => {
 	return (
 		<>
 			<Meta />
-			<Nav activeHref="/" />
-			<Hero />
+			<Nav activeHref="/stats" />
+			<WIP />
 			<Footer />
 		</>
 	);
 };
 
-export default Index;
+export default Login;

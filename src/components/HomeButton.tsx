@@ -4,7 +4,7 @@ import NextLink from 'next/link';
 export const HomeButton = () => {
 	return (
 		<NextLink href="/" passHref>
-			<Button mt="10" bg="purple.600" fontWeight="bold" _hover={{ background: 'purple.700' }}>
+			<Button mt="10" variant="main">
 				Go Back
 			</Button>
 		</NextLink>

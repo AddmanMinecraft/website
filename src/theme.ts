@@ -5,32 +5,100 @@ const config = {
 	useSystemColorMode: false,
 };
 
+const fonts = {
+	base: 'Inter',
+};
+
 const styles = {
 	global: {
 		body: {
-			fontFamily: 'body',
+			fontFamily: 'base',
 			bg: 'gray.900',
+			overflowX: 'hidden',
+		},
+		'*': {
+			scrollbarWidth: 'thin',
+			scrollbarColor: '#A2A2A2 #121212',
+		},
+		'*::-webkit-scrollbar': {
+			width: '8px',
+		},
+		'*::-webkit-scrollbar-track': {
+			background: '#252525',
+		},
+		'*::-webkit-scrollbar-thumb': {
+			backgroundColor: '#A2A2A2',
+			borderRadius: '10px',
+		},
+		'*::selection': {
+			background: '#4b43d7',
+			color: '#fff',
+		},
+		'*::-moz-selection': {
+			background: '#4b43d7',
+			color: '#fff',
 		},
 	},
 };
 
-// const colors = {
-// 	gray: {
-// 		200: '#4F4F4F',
-// 		800: '#1E1E1E',
-// 		900: '#181818',
-// 	},
-// 	green: {
-// 		200: '#00E18F',
-// 		300: '#00C67E',
-// 		400: '#009861',
-// 	},
-// };
+const components = {
+	Button: {
+		variants: {
+			main: () => ({
+				fontWeight: 'semibold',
+				color: 'white',
+				backgroundColor: 'purple.600',
+				borderRadius: '5px',
+				_hover: {
+					backgroundColor: 'blue.200',
+				},
+				_active: {
+					backgroundColor: 'blue.200',
+				},
+			}),
+			secondary: () => ({
+				fontWeight: 'semibold',
+				color: 'purple.600',
+				backgroundColor: 'gray.700',
+				borderRadius: '5px',
+				_hover: {
+					backgroundColor: 'gray.800',
+				},
+				_active: {
+					backgroundColor: 'gray.800',
+				},
+			}),
+		},
+	},
+};
+
+const colors = {
+	gray: {
+		// Nav/Footer Text
+		300: '#AAAAAA',
+		// Secondary Button Background
+		700: '#1B1C1C',
+		// Secondary Button Hover
+		800: '#161717',
+		// Background
+		900: '#121212',
+	},
+	blue: {
+		// Main Button/Nav Text Hover
+		200: '#4666E4',
+	},
+	purple: {
+		// Main Button Background
+		600: '#4b43d7',
+	},
+};
 
 const theme = extendTheme({
 	config,
+	fonts,
 	styles,
-	// colors,
+	components,
+	colors,
 });
 
 export default theme;

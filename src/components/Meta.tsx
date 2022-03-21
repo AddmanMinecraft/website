@@ -51,8 +51,8 @@ export const Meta = () => {
 					],
 				}}
 				twitter={{
-					handle: '@observerbotmc',
-					site: '@observerbotmc',
+					handle: '@ObserverBotMC',
+					site: '@ObserverBotMC',
 					cardType: 'summary_large_image',
 				}}
 			/>
