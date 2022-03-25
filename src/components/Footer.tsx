@@ -31,7 +31,7 @@ export const Footer = () => (
 			<Text fontSize="sm" color="subtle">
 				&copy; {new Date().getFullYear()} Observer. All rights reserved.
 				<br />
-				Created by Decassu, Evernote, & xMdb.
+				Website by Decassu, Evernote, & xMdb.
 			</Text>
 		</Stack>
 	</Container>
