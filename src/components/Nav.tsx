@@ -11,7 +11,7 @@ export const Nav = ({ activeHref }: NavProps) => {
 					<DesktopNav activeHref={activeHref} />
 				</Flex>
 				<NextLink href="/" passHref>
-					<Box flex={1} justifyContent="center" ml={5} as="a">
+					<Box flex={1} justifyContent="center" ml={5}>
 						<Logo />
 					</Box>
 				</NextLink>
@@ -23,8 +23,10 @@ export const Nav = ({ activeHref }: NavProps) => {
 							m={1.5}
 							fontSize="sm"
 							color={activeHref === '/login' ? 'white' : 'gray.300'}
+							transition="all 0.25s ease-in-out"
 							_hover={{
-								color: 'blue.200',
+								color: 'purple.600',
+								transition: 'all 0.25s ease-in-out',
 							}}>
 							Login
 						</Box>
@@ -48,8 +50,10 @@ const DesktopNav = ({ activeHref }: NavProps) => {
 							m={5}
 							fontSize="sm"
 							color={activeHref === href ? 'white' : 'gray.300'}
+							transition="all 0.25s ease-in-out"
 							_hover={{
-								color: 'blue.200',
+								color: 'purple.600',
+								transition: 'all 0.25s ease-in-out',
 							}}>
 							{label}
 						</Box>
@@ -59,12 +63,17 @@ const DesktopNav = ({ activeHref }: NavProps) => {
 		</Box>
 	);
 };
+
 const MobileNav = () => {
 	const { isOpen, onToggle } = useDisclosure();
 	return (
 		<>
 			<Box minH="60px" py={30} px={[5, 10, 15]} textAlign="center" display={{ base: 'flex', md: 'none' }}>
-				<Logo />
+				<NextLink href="/" passHref>
+					<Box as="a">
+						<Logo />
+					</Box>
+				</NextLink>
 				<Flex display={{ base: 'flex', md: 'none' }} justifyContent="flex-end" flex={1}>
 					<IconButton
 						onClick={onToggle}
@@ -98,7 +107,7 @@ const MobileNavItem = ({ label, href }: NavItem) => {
 				_hover={{
 					textDecoration: 'none',
 				}}>
-				<Text fontWeight={600} color="gray.200">
+				<Text fontWeight="semibold" color="gray.200">
 					{label}
 				</Text>
 			</Flex>
