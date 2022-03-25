@@ -1,7 +1,5 @@
-import { Box, Flex, Text, IconButton, Stack, Link, useDisclosure } from '@chakra-ui/react';
+import { Box, Flex, Text, IconButton, Stack, Link, Collapse, useDisclosure } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
-import { useState } from 'react';
-import { motion } from 'framer-motion';
 import { Logo } from './Logo';
 import NextLink from 'next/link';
 
@@ -62,65 +60,47 @@ const DesktopNav = ({ activeHref }: NavProps) => {
 	);
 };
 const MobileNav = () => {
-	const { getButtonProps, getDisclosureProps, isOpen } = useDisclosure();
-	const [hidden, setHidden] = useState(!isOpen);
+	const { isOpen, onToggle } = useDisclosure();
 	return (
 		<>
-			<motion.div
-				{...getDisclosureProps()}
-				hidden={hidden}
-				initial={false}
-				onAnimationStart={() => setHidden(false)}
-				onAnimationComplete={() => setHidden(!isOpen)}
-				animate={{ width: isOpen ? 300 : 0 }}
-				style={{
-					background: '#353535',
-					overflow: 'hidden',
-					whiteSpace: 'nowrap',
-					position: 'fixed',
-					zIndex: '2',
-					right: '0',
-					height: '100vh',
-					top: '0',
-				}}>
-				<Stack justify="center" alignItems="center" align="center" my="25vh">
-					{NavItems.map((navItem) => (
-						<MobileNavItem key={navItem.label} {...navItem} />
-					))}
-				</Stack>
-			</motion.div>
 			<Box minH="60px" py={30} px={[5, 10, 15]} textAlign="center" display={{ base: 'flex', md: 'none' }}>
 				<Logo />
 				<Flex display={{ base: 'flex', md: 'none' }} justifyContent="flex-end" flex={1}>
 					<IconButton
-						{...getButtonProps()}
-						display="inline-flex"
-						color="purple.700"
-						zIndex={3}
-						icon={isOpen ? <CloseIcon w={4} h={4} /> : <HamburgerIcon w={8} h={8} />}
-						variant="ghost"
-						aria-label="Toggle Navigation"
+						onClick={onToggle}
+						icon={isOpen ? <CloseIcon w={3} h={3} /> : <HamburgerIcon w={5} h={5} />}
+						variant={'ghost'}
+						aria-label={'Toggle Navigation'}
 					/>
 				</Flex>
 			</Box>
+			<Collapse in={isOpen} animateOpacity>
+				<Stack bg="gray.800" p={4}>
+					{NavItems.map((navItem) => (
+						<MobileNavItem key={navItem.label} {...navItem} />
+					))}
+				</Stack>
+			</Collapse>
 		</>
 	);
 };
 
 const MobileNavItem = ({ label, href }: NavItem) => {
+	const { onToggle } = useDisclosure();
 	return (
-		<Stack align="center">
+		<Stack spacing={4} onClick={onToggle}>
 			<Flex
-				p={2}
-				m={0.5}
+				py={2}
 				as={Link}
 				href={href ?? '#'}
-				justify="space-between"
+				justify={'space-between'}
+				align={'center'}
 				_hover={{
-					color: 'purple.700',
 					textDecoration: 'none',
 				}}>
-				<Text fontSize="2xl">{label}</Text>
+				<Text fontWeight={600} color="gray.200">
+					{label}
+				</Text>
 			</Flex>
 		</Stack>
 	);
