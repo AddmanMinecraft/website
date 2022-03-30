@@ -14,7 +14,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 	return (
 		<ChakraProvider resetCSS={true} theme={theme}>
 			<Component {...pageProps} />
-            <Script async src="https://arc.io/widget.min.js#sARimiAt" />
+			<Script async src="https://arc.io/widget.min.js#sARimiAt" />
 		</ChakraProvider>
 	);
 }
