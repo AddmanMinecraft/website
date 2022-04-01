@@ -1,6 +1,5 @@
-import { Box, Flex, Text, IconButton, Stack, Link, Collapse, Button, useDisclosure } from '@chakra-ui/react';
+import { Box, Flex, Text, IconButton, Stack, Link, Collapse, useDisclosure } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
-import { FaDollarSign } from 'react-icons/fa';
 import { Wordmark } from './Wordmark';
 import { Logo } from './Logo';
 import NextLink from 'next/link';
