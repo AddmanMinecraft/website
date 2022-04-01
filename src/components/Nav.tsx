@@ -1,26 +1,36 @@
-import { Box, Flex, Text, IconButton, Stack, Link, Collapse, useDisclosure } from '@chakra-ui/react';
+import { Box, Flex, Text, IconButton, Stack, Link, Collapse, Button, useDisclosure } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
+import { FaDollarSign } from 'react-icons/fa';
+import { Wordmark } from './Wordmark';
 import { Logo } from './Logo';
 import NextLink from 'next/link';
 
 export const Nav = ({ activeHref }: NavProps) => {
 	return (
 		<Box height="10vh">
-			<Box minH="60px" py={30} px={[5, 25, 50]} textAlign="center" display={{ base: 'none', md: 'flex' }}>
-				<Flex justifyContent="flex-start" flex={1}>
-					<DesktopNav activeHref={activeHref} />
-				</Flex>
+			<Box minH="60px" textAlign="center" display={{ base: 'none', md: 'flex' }}>
 				<NextLink href="/" passHref>
-					<Box flex={1} justifyContent="center" ml={5}>
-						<Logo />
+					<Box>
+						<Wordmark />
 					</Box>
 				</NextLink>
-				<Box justifyContent="flex-end" display="inline-flex">
+
+				<Flex justifyContent="center" textAlign="center" alignContent="center" flex={1}>
+					<DesktopNav activeHref={activeHref} />
+				</Flex>
+
+				<Box justifyContent="flex-end" alignItems="center">
+					{/* TEMP HIDDEN, STILL NEED TO ADD /premium */}
+					{/* <NextLink href="/premium" passHref>
+						<Button variant="main" leftIcon={<FaDollarSign />} px="25px">
+							Go Premium
+						</Button>
+					</NextLink> */}
+
 					<NextLink href="/login" passHref>
 						<Box
 							as="a"
-							p={2}
-							m={1.5}
+							ml="5ch"
 							fontSize="sm"
 							color={activeHref === '/login' ? 'white' : 'gray.300'}
 							transition="all 0.25s ease-in-out"
@@ -40,14 +50,14 @@ export const Nav = ({ activeHref }: NavProps) => {
 
 const DesktopNav = ({ activeHref }: NavProps) => {
 	return (
-		<Box display="inline-flex">
+		<>
 			{NavItems.map(({ label, href }) => (
 				<Box key={label} mt={3}>
 					<NextLink href={href ?? '#'} passHref>
 						<Box
 							as="a"
-							p={2}
-							m={5}
+							m="4ch"
+							p="1ch"
 							fontSize="sm"
 							color={activeHref === href ? 'white' : 'gray.300'}
 							transition="all 0.25s ease-in-out"
@@ -60,7 +70,7 @@ const DesktopNav = ({ activeHref }: NavProps) => {
 					</NextLink>
 				</Box>
 			))}
-		</Box>
+		</>
 	);
 };
 

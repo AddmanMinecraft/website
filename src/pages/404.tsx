@@ -5,7 +5,7 @@ import { HomeButton } from '../components/HomeButton';
 
 const Custom404: NextPage = () => {
 	return (
-		<>
+		<Box py={[0, 30]} px={[5, 100, 150]}>
 			<Nav activeHref="none" />
 			<Box height="90vh">
 				<Flex
@@ -25,7 +25,7 @@ const Custom404: NextPage = () => {
 					<HomeButton />
 				</Flex>
 			</Box>
-		</>
+		</Box>
 	);
 };
 

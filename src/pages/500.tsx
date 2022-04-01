@@ -6,7 +6,7 @@ import NextLink from 'next/link';
 
 const Custom500: NextPage = () => {
 	return (
-		<>
+		<Box py={[0, 30]} px={[5, 100, 150]}>
 			<Nav activeHref="none" />
 			<Box height="90vh">
 				<Flex
@@ -36,7 +36,7 @@ const Custom500: NextPage = () => {
 					<HomeButton />
 				</Flex>
 			</Box>
-		</>
+		</Box>
 	);
 };
 
