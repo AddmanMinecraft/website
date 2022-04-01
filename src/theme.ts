@@ -58,7 +58,7 @@ const components = {
 			}),
 			secondary: () => ({
 				fontWeight: 'semibold',
-				color: 'purple.600',
+				color: 'white',
 				backgroundColor: 'gray.700',
 				borderRadius: '5px',
 				_hover: {
