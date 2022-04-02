@@ -19,6 +19,11 @@ module.exports = {
 				destination: 'https://discord.com/invite/YyCyZtchg3',
 				permanent: true,
 			},
+			{
+				source: '/arc-sw.js',
+				destination: 'https://arc.io/arc-sw.js',
+				permanent: true,
+			},
 		];
 	},
 };
