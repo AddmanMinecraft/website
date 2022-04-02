@@ -1,5 +1,6 @@
-import { Box, Flex, Text, IconButton, Stack, Link, Collapse, useDisclosure } from '@chakra-ui/react';
+import { Box, Flex, Text, IconButton, Stack, Link, Collapse, Button, useDisclosure } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
+import { FaDollarSign } from 'react-icons/fa';
 import { Wordmark } from './Wordmark';
 import { Logo } from './Logo';
 import NextLink from 'next/link';
@@ -7,7 +8,7 @@ import NextLink from 'next/link';
 export const Nav = ({ activeHref }: NavProps) => {
 	return (
 		<Box height="10vh">
-			<Box minH="60px" textAlign="center" display={{ base: 'none', md: 'flex' }}>
+			<Box py={[0, 30]} px={[5, 100, 200]} minH="60px" textAlign="center" display={{ base: 'none', md: 'flex' }}>
 				<NextLink href="/" passHref>
 					<Box>
 						<Wordmark />
@@ -19,12 +20,11 @@ export const Nav = ({ activeHref }: NavProps) => {
 				</Flex>
 
 				<Box justifyContent="flex-end" alignItems="center">
-					{/* TEMP HIDDEN, STILL NEED TO ADD /premium */}
-					{/* <NextLink href="/premium" passHref>
+					<NextLink href="/premium" passHref>
 						<Button variant="main" leftIcon={<FaDollarSign />} px="25px">
 							Go Premium
 						</Button>
-					</NextLink> */}
+					</NextLink>
 
 					<NextLink href="/login" passHref>
 						<Box

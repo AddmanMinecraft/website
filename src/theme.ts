@@ -45,7 +45,7 @@ const components = {
 	Button: {
 		variants: {
 			main: () => ({
-				fontWeight: 'semibold',
+				fontWeight: 'medium',
 				color: 'white',
 				backgroundColor: 'purple.600',
 				borderRadius: '5px',
@@ -57,7 +57,7 @@ const components = {
 				},
 			}),
 			secondary: () => ({
-				fontWeight: 'semibold',
+				fontWeight: 'medium',
 				color: 'white',
 				backgroundColor: 'gray.700',
 				borderRadius: '5px',
