@@ -1,4 +1,3 @@
-import { Box } from '@chakra-ui/react';
 import { NextPage } from 'next';
 import { Nav } from '../components/Nav';
 import { Meta } from '../components/Meta';
@@ -10,12 +9,10 @@ const Index: NextPage = () => {
 	return (
 		<>
 			<Meta />
-			<Box py={[0, 30]} px={[5, 100, 150]}>
-				<Nav activeHref="/" />
-				<Hero />
-				<Features />
-				<Footer />
-			</Box>
+			<Nav activeHref="/" />
+			<Hero />
+			<Features />
+			<Footer />
 		</>
 	);
 };
