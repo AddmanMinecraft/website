@@ -29,7 +29,7 @@ export const Features = () => {
 				<Text fontSize="xl" fontWeight="500" pb={5} mb={25}>
 					Brag about your stats with Observer's cutting edge designs.
 				</Text>
-				<Image src='observer.png' alt="Observer Design" width="50%" py={10}></Image>
+				<Image src="observer.png" alt="Observer Design" width="50%" py={10}></Image>
 			</Flex>
 		</Box>
 	);
