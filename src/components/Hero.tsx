@@ -5,7 +5,7 @@ export const Hero = () => {
 	return (
 		<Box height="70vh">
 			<SimpleGrid columns={[2, null, 0]} mt={100}>
-				<VStack w="full" h="full" py={[2, 4, 6, 8]} ml={50} px={[50, 130, 160]} align="flex-start">
+				<VStack w="full" h="full" py={[2, 4, 6, 8]} ml={50} pl={[50, 130, 160]} align="flex-start">
 					<Text fontSize="7xl" fontWeight="900" pb={5} lineHeight="130%" mb={25}>
 						Hypixel Statistics
 						<br />

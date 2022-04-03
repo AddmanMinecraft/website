@@ -6,7 +6,7 @@ const config = {
 };
 
 const fonts = {
-	base: 'Inter',
+	base: 'Montserrat, sans-serif',
 };
 
 const styles = {
