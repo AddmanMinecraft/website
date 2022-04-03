@@ -31,11 +31,11 @@ const styles = {
 			borderRadius: '10px',
 		},
 		'*::selection': {
-			background: '#4b43d7',
+			background: '#4666E4',
 			color: '#fff',
 		},
 		'*::-moz-selection': {
-			background: '#4b43d7',
+			background: '#4666E4',
 			color: '#fff',
 		},
 	},
@@ -76,10 +76,10 @@ const colors = {
 	gray: {
 		// Nav/Footer Text
 		300: '#AAAAAA',
-		// Secondary Button Background
-		700: '#1B1C1C',
-		// Secondary Button Hover
-		800: '#161717',
+		// Stats Text
+		400: '#A8ACB6',
+		// Secondary Background
+		800: '#242833',
 		// Background
 		900: '#121212',
 	},

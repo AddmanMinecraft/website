@@ -16,10 +16,10 @@ export const Hero = () => {
 						fontWeight="regular"
 						pb="80px"
 						wordBreak="break-word"
-						maxWidth="65ch"
+						maxWidth="50ch"
 						lineHeight="160%">
-						An innovative Hypixel stats bot that allows users to view their daily and weekly BedWars,
-						SkyWars, and Duels statistics.
+						Observer is an innovative Hypixel stats bot that features historical statistics, leaderboards,
+						rankings, graphs and much more!
 					</Text>
 
 					<Flex flexDirection="row">
@@ -29,7 +29,7 @@ export const Hero = () => {
 							</Button>
 						</NextLink>
 						<NextLink href="/about" passHref>
-							<Button variant="secondary" px={['3ch', '50px']} py="15px">
+							<Button variant="secondary" px={['10px', '40px']} py="15px">
 								Learn More
 							</Button>
 						</NextLink>
