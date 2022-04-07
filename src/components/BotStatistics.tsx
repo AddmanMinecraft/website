@@ -1,6 +1,5 @@
-import { Box, SimpleGrid, VStack, Text, Image } from '@chakra-ui/react';
+import { Box, SimpleGrid, VStack, Text, Image, Icon } from '@chakra-ui/react';
 import { FaCode, FaServer, FaUser, FaUserCheck } from 'react-icons/fa';
-import { separateWithCommas } from '../utils';
 
 export interface BotStatsTypes {
 	observerData: {
@@ -13,8 +12,8 @@ export interface BotStatsTypes {
 	statcordData: {
 		data: {
 			0: {
-				servers: number;
-				users: number;
+				servers: string;
+				users: string;
 			};
 		};
 	};
@@ -31,47 +30,37 @@ export const BotStatistics = ({ observerData, statcordData }: BotStatsTypes) => 
 					<SimpleGrid columns={2} spacing={10} spacingX="200px">
 						<Box>
 							<Text fontSize="4xl" fontWeight="medium">
-								{separateWithCommas(statcordData.data[0].servers)}
+								{Number(statcordData.data[0].servers).toLocaleString()}
 							</Text>
-							<Text fontSize="xl" fontWeight="medium" color="gray.400" display="flex" alignItems="center">
-								<Box pr={2}>
-									<FaServer />
-								</Box>{' '}
-								Servers
+							<Text fontSize="xl" fontWeight="light" color="gray.400" display="flex" alignItems="center">
+								<Icon as={FaServer} size="2x" mr={2} /> Servers
 							</Text>
 						</Box>
 						<Box>
 							<Text fontSize="4xl" fontWeight="medium">
-								{separateWithCommas(observerData.stats.verifiedUsers)}
+								{observerData.stats.verifiedUsers.toLocaleString()}
 							</Text>
-							<Text fontSize="xl" fontWeight="medium" color="gray.400" display="flex" alignItems="center">
-								<Box pr={2}>
-									<FaUserCheck />
-								</Box>{' '}
+							<Text fontSize="xl" fontWeight="light" color="gray.400" display="flex" alignItems="center">
+								<Icon as={FaUserCheck} size="2x" mr={2} />
 								Verified Users
 							</Text>
 						</Box>
 
 						<Box>
 							<Text fontSize="4xl" fontWeight="medium">
-								{separateWithCommas(observerData.stats.trackedPlayers)}
+								{observerData.stats.trackedPlayers.toLocaleString()}
 							</Text>
-							<Text fontSize="xl" fontWeight="medium" color="gray.400" display="flex" alignItems="center">
-								<Box pr={2}>
-									<FaUser />
-								</Box>{' '}
-								Tracked Players
+							<Text fontSize="xl" fontWeight="light" color="gray.400" display="flex" alignItems="center">
+								<Icon as={FaUser} size="2x" mr={2} /> Tracked Players
 							</Text>
 						</Box>
 						<Box>
 							<Text fontSize="4xl" fontWeight="medium">
-								{separateWithCommas(observerData.stats.commandsExecuted)}
+								{observerData.stats.commandsExecuted.toLocaleString()}
 							</Text>
-							<Text fontSize="xl" fontWeight="medium" color="gray.400" display="flex" alignItems="center">
-								<Box pr={2}>
-									<FaCode />
-								</Box>{' '}
-								Commands Executed
+
+							<Text fontSize="xl" fontWeight="light" color="gray.400" display="flex" alignItems="center">
+								<Icon as={FaCode} size="2x" mr={2} /> Commands Executed
 							</Text>
 						</Box>
 					</SimpleGrid>
