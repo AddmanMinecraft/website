@@ -22,14 +22,14 @@ export const Features = () => {
 					borderRadius: '0 0 50% 50%/0 0 100% 100%',
 					transform: 'scaleX(1.5) rotate(180deg)',
 				}}></Flex>
-			<Flex background="purple.600" px="20vw" flexDirection="column">
-				<Text fontSize="6xl" fontWeight="800" mb={25}>
+			<Flex background="purple.600" px={[10, '200px']} flexDirection="column">
+				<Text fontSize={['3xl', '6xl']} fontWeight="800" mb={25}>
 					Show-off while looking good.
 				</Text>
-				<Text fontSize="xl" fontWeight="500" pb={5} mb={25}>
+				<Text fontSize="md" fontWeight="500" pb={5} mb={25}>
 					Brag about your stats with Observer's cutting edge designs.
 				</Text>
-				<Image src="observer.png" alt="Observer Design" width="50%" py={10}></Image>
+				<Image src="observer.png" alt="Observer Design" width={['100%', '50%']} py={10}></Image>
 			</Flex>
 		</Box>
 	);

@@ -93,7 +93,7 @@ const MobileNav = () => {
 				</Flex>
 			</Box>
 			<Collapse in={isOpen} animateOpacity>
-				<Stack bg="gray.800" p={4}>
+				<Stack bg="gray.800" p={4} position="relative">
 					{NavItems.map((navItem) => (
 						<MobileNavItem key={navItem.label} {...navItem} />
 					))}

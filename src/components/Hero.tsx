@@ -4,15 +4,22 @@ import NextLink from 'next/link';
 export const Hero = () => {
 	return (
 		<Box height="70vh">
-			<SimpleGrid columns={[2, null, 0]} mt={100}>
-				<VStack w="full" h="full" py={[2, 4, 6, 8]} ml={50} pl={[50, 130, 160]} align="flex-start">
-					<Text fontSize="7xl" fontWeight="900" pb={5} lineHeight="130%" mb={25}>
+			<SimpleGrid columns={[2, null, 0]} mt={[10, 100]} display={['block', 'grid']}>
+				<VStack
+					w="full"
+					h="full"
+					py={[2, 4, 6, 8]}
+					ml={[0, 50]}
+					pl={[5, 130, 150]}
+					align={['center', 'flex-start']}
+					textAlign={['center', 'left']}>
+					<Text fontSize={['5xl', '7xl']} fontWeight="900" pb={5} lineHeight="130%" mb={25}>
 						Hypixel Statistics
 						<br />
 						<span className="textGradient">Redefined</span>
 					</Text>
 					<Text
-						fontSize={['lg', 'xl']}
+						fontSize={['md', 'xl']}
 						fontWeight="regular"
 						pb="80px"
 						wordBreak="break-word"
@@ -35,7 +42,14 @@ export const Hero = () => {
 						</NextLink>
 					</Flex>
 				</VStack>
-				<VStack w="full" h="full" py={[2, 4, 6, 8]} pl={200} spacing={6} align="flex-start">
+				<VStack
+					w="full"
+					h="full"
+					py={[2, 4, 6, 8]}
+					pl={200}
+					spacing={6}
+					align="flex-start"
+					display={['none', 'grid']}>
 					<Image src="/mascot.svg" alt="Observer Mascot" width="100%"></Image>
 				</VStack>
 			</SimpleGrid>
