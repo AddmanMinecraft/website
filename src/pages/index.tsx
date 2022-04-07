@@ -23,7 +23,7 @@ const Index: NextPage<BotStatsTypes> = ({ observerData, topGGData }) => {
 };
 
 export async function getStaticProps() {
-	const observerApiCall = await axios.get('https://api.invite.observer/v1/stats', observerConfig);
+	const observerApiCall = await axios.get('https://api.invite.observer/v1/stats', {headers: {"API-Key" : observerConfig }});
 	const topGGApiCall = await axios.get('https://top.gg/api/bots/813718772908163082/stats', topGGConfig);
 	const observerData = observerApiCall.data;
 	const topGGData = topGGApiCall.data;
