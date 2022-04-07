@@ -10,7 +10,7 @@ export const Footer = () => (
 				<ButtonGroup variant="ghost">
 					<IconButton
 						as="a"
-						href="https://discord.gg/observer"
+						href="/discord"
 						aria-label="Discord"
 						icon={<FaDiscord fontSize="1.25rem" />}
 					/>

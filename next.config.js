@@ -16,7 +16,7 @@ module.exports = {
 				permanent: true,
 			},
 			{
-				source: '/support',
+				source: '/discord',
 				destination: 'https://discord.com/invite/YyCyZtchg3',
 				permanent: true,
 			},
