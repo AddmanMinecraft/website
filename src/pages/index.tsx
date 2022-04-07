@@ -6,7 +6,7 @@ import { Features } from '../components/Features';
 import { Footer } from '../components/Footer';
 import { BotStatistics, BotStatsTypes } from '../components/BotStatistics';
 
-import { topGGConfig } from '../config';
+import { observerConfig, topGGConfig } from '../config';
 import axios from 'axios';
 
 const Index: NextPage<BotStatsTypes> = ({ observerData, topGGData }) => {
@@ -23,7 +23,7 @@ const Index: NextPage<BotStatsTypes> = ({ observerData, topGGData }) => {
 };
 
 export async function getStaticProps() {
-	const observerApiCall = await axios.get('https://api.invite.observer/v1/stats', {headers: {"API-Key" : "bd090138-6b3f-40ca-846d-7b7ff3b8fee9" }});
+	const observerApiCall = await axios.get('https://api.invite.observer/v1/stats', observerConfig);
 	const topGGApiCall = await axios.get('https://top.gg/api/bots/813718772908163082/stats', topGGConfig);
 	const observerData = observerApiCall.data;
 	const topGGData = topGGApiCall.data;
