@@ -1,7 +1,17 @@
 import { Box, SimpleGrid, VStack, Text, Image, Icon } from '@chakra-ui/react';
 import { FaCode, FaServer, FaUser, FaUserCheck } from 'react-icons/fa';
 
-export const BotStatistics = ({ topGGData }: any) => {
+export interface BotStatsTypes {
+	observerData: {
+		stats: {
+			commandsExecuted: number;
+			trackedPlayers: number;
+			verifiedUsers: number;
+		};
+	};
+}
+
+export const BotStatistics = ({ observerData }: BotStatsTypes) => {
 	return (
 		<Box height={['100vh', '90vh', '50vh']} background="gray.800">
 			<SimpleGrid columns={[2, null, 0]} display={['block', 'grid']}>
@@ -19,7 +29,7 @@ export const BotStatistics = ({ topGGData }: any) => {
 					<SimpleGrid columns={2} spacing={10} spacingX="200px">
 						<Box>
 							<Text fontSize={['md', '4xl']} fontWeight="medium">
-								{topGGData.server_count.toLocaleString()}
+								{/* {topGGData.server_count.toLocaleString()} */}
 							</Text>
 							<Text fontSize="xl" fontWeight="light" color="gray.400" display="flex" alignItems="center">
 								<Icon as={FaServer} size="2x" mr={2} /> Servers
@@ -27,7 +37,7 @@ export const BotStatistics = ({ topGGData }: any) => {
 						</Box>
 						<Box>
 							<Text fontSize="4xl" fontWeight="medium">
-								{/* {observerData.stats.verifiedUsers.toLocaleString()} */}
+								{observerData.stats.verifiedUsers.toLocaleString()}
 							</Text>
 							<Text fontSize="xl" fontWeight="light" color="gray.400" display="flex" alignItems="center">
 								<Icon as={FaUserCheck} size="2x" mr={2} />
@@ -37,7 +47,7 @@ export const BotStatistics = ({ topGGData }: any) => {
 
 						<Box>
 							<Text fontSize="4xl" fontWeight="medium">
-								{/* {observerData.stats.trackedPlayers.toLocaleString()} */}
+								{observerData.stats.trackedPlayers.toLocaleString()}
 							</Text>
 							<Text fontSize="xl" fontWeight="light" color="gray.400" display="flex" alignItems="center">
 								<Icon as={FaUser} size="2x" mr={2} /> Tracked Players
@@ -45,7 +55,7 @@ export const BotStatistics = ({ topGGData }: any) => {
 						</Box>
 						<Box>
 							<Text fontSize="4xl" fontWeight="medium">
-								{/* {observerData.stats.commandsExecuted.toLocaleString()} */}
+								{observerData.stats.commandsExecuted.toLocaleString()}
 							</Text>
 
 							<Text fontSize="xl" fontWeight="light" color="gray.400" display="flex" alignItems="center">
