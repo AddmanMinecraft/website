@@ -4,32 +4,32 @@ import { Meta } from '../components/Meta';
 import { Hero } from '../components/Hero';
 import { Features } from '../components/Features';
 import { Footer } from '../components/Footer';
-import { BotStatistics, BotStatsTypes } from '../components/BotStatistics';
+import { BotStatistics } from '../components/BotStatistics';
 
-import { observerConfig, topGGConfig } from '../config';
+import { topGGConfig } from '../config';
 import axios from 'axios';
 
-const Index: NextPage<BotStatsTypes> = ({ observerData, topGGData }) => {
+const Index: NextPage = ({ topGGData }: any) => {
 	return (
 		<>
 			<Meta />
 			<Nav activeHref="/" />
 			<Hero />
 			<Features />
-			<BotStatistics observerData={observerData} topGGData={topGGData} />
+			<BotStatistics topGGData={topGGData} />
 			<Footer />
 		</>
 	);
 };
 
 export async function getStaticProps() {
-	const observerApiCall = await axios.get('https://api.invite.observer/v1/stats', observerConfig);
+	// const observerApiCall = await axios.get('https://api.invite.observer/v1/stats', observerConfig);
 	const topGGApiCall = await axios.get('https://top.gg/api/bots/813718772908163082/stats', topGGConfig);
-	const observerData = observerApiCall.data;
+	// const observerData = observerApiCall.data;
 	const topGGData = topGGApiCall.data;
 	return {
 		props: {
-			observerData,
+			// observerData,
 			topGGData,
 		},
 		// Every x seconds, refresh stats
