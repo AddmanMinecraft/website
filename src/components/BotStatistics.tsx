@@ -9,9 +9,12 @@ export interface BotStatsTypes {
 			verifiedUsers: number;
 		};
 	};
+	topGGData: {
+		server_count: number;
+	};
 }
 
-export const BotStatistics = ({ observerData }: BotStatsTypes) => {
+export const BotStatistics = ({ observerData, topGGData }: BotStatsTypes) => {
 	return (
 		<Box height={['100vh', '90vh', '50vh']} background="gray.800">
 			<SimpleGrid columns={[2, null, 0]} display={['block', 'grid']}>
@@ -29,7 +32,7 @@ export const BotStatistics = ({ observerData }: BotStatsTypes) => {
 					<SimpleGrid columns={2} spacing={10} spacingX="200px">
 						<Box>
 							<Text fontSize={['md', '4xl']} fontWeight="medium">
-								{/* {topGGData.server_count.toLocaleString()} */}
+								{topGGData.server_count.toLocaleString()}
 							</Text>
 							<Text fontSize="xl" fontWeight="light" color="gray.400" display="flex" alignItems="center">
 								<Icon as={FaServer} size="2x" mr={2} /> Servers
