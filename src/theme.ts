@@ -89,7 +89,7 @@ const colors = {
 	},
 	purple: {
 		// Main Button Background
-		600: '#4b43d7',
+		600: '#4B43D7',
 	},
 };
 

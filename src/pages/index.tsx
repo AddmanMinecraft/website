@@ -37,5 +37,4 @@ export async function getStaticProps() {
 		revalidate: 300,
 	};
 }
-
 export default Index;

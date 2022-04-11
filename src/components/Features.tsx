@@ -1,8 +1,8 @@
-import { Flex, Box, Image, Text } from '@chakra-ui/react';
+import { Flex, Image, Text } from '@chakra-ui/react';
 
 export const Features = () => {
 	return (
-		<Box height="150vh">
+		<>
 			<Flex
 				justifyContent="center"
 				alignItems="center"
@@ -22,15 +22,15 @@ export const Features = () => {
 					borderRadius: '0 0 50% 50%/0 0 100% 100%',
 					transform: 'scaleX(1.5) rotate(180deg)',
 				}}></Flex>
-			<Flex background="purple.600" px={[10, '200px']} flexDirection="column">
-				<Text fontSize={['3xl', '6xl']} fontWeight="800" mb={25}>
+			<Flex background="purple.600" px={[10, null, '200px']} flexDirection="column">
+				<Text fontSize={['3xl', null, '6xl']} fontWeight="800" mb={25}>
 					Show-off while looking good.
 				</Text>
 				<Text fontSize="md" fontWeight="500" pb={5} mb={25}>
 					Brag about your stats with Observer's cutting edge designs.
 				</Text>
-				<Image src="observer.png" alt="Observer Design" width={['100%', '50%']} py={10}></Image>
+				<Image src="observer.png" alt="Observer Design" width={['100%', null, '50%']} py={10}></Image>
 			</Flex>
-		</Box>
+		</>
 	);
 };
