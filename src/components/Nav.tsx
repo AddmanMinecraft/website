@@ -1,14 +1,14 @@
-import { Box, Flex, Text, IconButton, Stack, Link, Collapse, Button, useDisclosure } from '@chakra-ui/react';
+import { Box, Flex, Text, IconButton, Stack, Link, Collapse, useDisclosure } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
-import { FaDollarSign } from 'react-icons/fa';
+// import { FaDollarSign } from 'react-icons/fa';
 import { Wordmark } from './Wordmark';
 import { Logo } from './Logo';
 import NextLink from 'next/link';
 
 export const Nav = ({ activeHref }: NavProps) => {
 	return (
-		<Box height="10vh">
-			<Box py={[0, 30]} px={[5, 100, 200]} minH="60px" textAlign="center" display={{ base: 'none', md: 'flex' }}>
+		<Box height="95px">
+			<Box py={[0, 30]} px={[5, 10, 25, 50, 75, 100, 200]} minH="60px" textAlign="center" display={{ base: 'none', md: 'flex' }}>
 				<NextLink href="/" passHref>
 					<Box>
 						<Wordmark />
@@ -20,11 +20,11 @@ export const Nav = ({ activeHref }: NavProps) => {
 				</Flex>
 
 				<Box justifyContent="flex-end" alignItems="center">
-					<NextLink href="/premium" passHref>
-						<Button variant="main" leftIcon={<FaDollarSign />} px="25px">
-							Go Premium
-						</Button>
-					</NextLink>
+					{/* <NextLink href="/premium" passHref>
+					<Button variant="main" leftIcon={<FaDollarSign />} px="25px">
+						Go Premium
+					</Button>
+					</NextLink> */}
 
 					<NextLink href="/login" passHref>
 						<Box
@@ -55,8 +55,8 @@ const DesktopNav = ({ activeHref }: NavProps) => {
 					<NextLink href={href ?? '#'} passHref>
 						<Box
 							as="a"
-							m="4ch"
-							p="1ch"
+							m={[0, '1ch', '1.5ch', '2ch', '2.5ch', '3ch', '4ch']}
+							p={[0, null, '1ch']}
 							fontSize="sm"
 							color={activeHref === href ? 'white' : 'gray.300'}
 							transition="all 0.25s ease-in-out"
@@ -93,7 +93,7 @@ const MobileNav = () => {
 				</Flex>
 			</Box>
 			<Collapse in={isOpen} animateOpacity>
-				<Stack bg="gray.800" p={4}>
+				<Stack bg="gray.800" p={4} position="relative">
 					{NavItems.map((navItem) => (
 						<MobileNavItem key={navItem.label} {...navItem} />
 					))}
