@@ -1,3 +1,6 @@
+import { config } from 'dotenv';
+config();
+
 export const observerConfig = {
 	headers: {
 		'API-Key': process.env.OBSERVER_API_KEY as string,
