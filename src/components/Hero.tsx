@@ -15,7 +15,8 @@ export const Hero = () => {
 					textAlign={['center', null, 'left']}
 					// backgroundColor="rgba(255, 0, 0, 0.4)"
 					// eslint-disable-next-line quotes
-					bg={[`url('/greyMascot.svg') left no-repeat`, null, 'none']}>
+					bg={[`url('/greyMascot.svg') left no-repeat`, null, 'none']}
+				>
 					<Text fontSize={['5xl', null, '7xl']} fontWeight="900" pb={5} lineHeight="130%" mb={25}>
 						Hypixel Statistics
 						<br />
@@ -27,7 +28,8 @@ export const Hero = () => {
 						pb="80px"
 						wordBreak="break-word"
 						maxWidth="50ch"
-						lineHeight="160%">
+						lineHeight="160%"
+					>
 						Observer is an innovative Hypixel stats bot that features historical statistics, leaderboards,
 						rankings, graphs and much more!
 					</Text>
@@ -51,7 +53,8 @@ export const Hero = () => {
 					pl={200}
 					spacing={6}
 					align="flex-start"
-					display={['none', null, 'grid']}>
+					display={['none', null, 'grid']}
+				>
 					<Image src="/mascot.svg" alt="Observer Mascot" width="100%"></Image>
 				</VStack>
 			</SimpleGrid>

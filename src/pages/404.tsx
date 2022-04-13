@@ -14,7 +14,8 @@ const Custom404: NextPage = () => {
 					flexDirection="column"
 					p={30}
 					pt={150}
-					textAlign="center">
+					textAlign="center"
+				>
 					<Text fontSize="6xl" fontWeight="900" pb={5} lineHeight="120%" mb={25}>
 						🤷‍♂️
 					</Text>

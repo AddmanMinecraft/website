@@ -8,12 +8,7 @@ export const Footer = () => (
 			<Stack justify="space-between" direction="row" align="center">
 				<Logo />
 				<ButtonGroup variant="ghost">
-					<IconButton
-						as="a"
-						href="/discord"
-						aria-label="Discord"
-						icon={<FaDiscord fontSize="1.25rem" />}
-					/>
+					<IconButton as="a" href="/discord" aria-label="Discord" icon={<FaDiscord fontSize="1.25rem" />} />
 					<IconButton
 						as="a"
 						href="https://twitter.com/ObserverBotMC"

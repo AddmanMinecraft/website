@@ -26,13 +26,15 @@ export const BotStatistics = ({ observerData, topGGData }: BotStatsTypes) => {
 					ml={[0, null, null, 50]}
 					pl={[0, null, null, 160]}
 					align={['center', null, null, 'flex-start']}
-					textAlign={['center', null, null, 'left']}>
+					textAlign={['center', null, null, 'left']}
+				>
 					<Text
 						fontSize={['3xl', '4xl', '5xl', '6xl']}
 						fontWeight="semibold"
 						pb={5}
 						mb={25}
-						mt={[50, null, 25]}>
+						mt={[50, null, 25]}
+					>
 						Trusted by everyone.
 					</Text>
 					<SimpleGrid columns={[2, null, 0]} spacing={10} spacingX="200px" display={['block', null, 'grid']}>

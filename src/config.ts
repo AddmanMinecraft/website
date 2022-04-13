@@ -6,6 +6,6 @@ export const observerConfig = {
 
 export const topGGConfig = {
 	headers: {
-		'Authorization': process.env.TOPGG_API_KEY as string,
+		Authorization: process.env.TOPGG_API_KEY as string,
 	},
 };

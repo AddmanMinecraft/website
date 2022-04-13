@@ -8,7 +8,13 @@ import NextLink from 'next/link';
 export const Nav = ({ activeHref }: NavProps) => {
 	return (
 		<Box height="95px">
-			<Box py={[0, 30]} px={[5, 10, 25, 50, 75, 100, 200]} minH="60px" textAlign="center" display={{ base: 'none', md: 'flex' }}>
+			<Box
+				py={[0, 30]}
+				px={[5, 10, 25, 50, 75, 100, 200]}
+				minH="60px"
+				textAlign="center"
+				display={{ base: 'none', md: 'flex' }}
+			>
 				<NextLink href="/" passHref>
 					<Box>
 						<Wordmark />
@@ -36,7 +42,8 @@ export const Nav = ({ activeHref }: NavProps) => {
 							_hover={{
 								color: 'purple.600',
 								transition: 'all 0.25s ease-in-out',
-							}}>
+							}}
+						>
 							Login
 						</Box>
 					</NextLink>
@@ -63,7 +70,8 @@ const DesktopNav = ({ activeHref }: NavProps) => {
 							_hover={{
 								color: 'purple.600',
 								transition: 'all 0.25s ease-in-out',
-							}}>
+							}}
+						>
 							{label}
 						</Box>
 					</NextLink>
@@ -115,7 +123,8 @@ const MobileNavItem = ({ label, href }: NavItem) => {
 				align={'center'}
 				_hover={{
 					textDecoration: 'none',
-				}}>
+				}}
+			>
 				<Text fontWeight="semibold" color="gray.200">
 					{label}
 				</Text>

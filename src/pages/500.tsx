@@ -15,7 +15,8 @@ const Custom500: NextPage = () => {
 					flexDirection="column"
 					p={30}
 					pt={150}
-					textAlign="center">
+					textAlign="center"
+				>
 					<Text fontSize="6xl" fontWeight="900" pb={5} lineHeight="120%" mb={25}>
 						😵
 					</Text>
@@ -27,7 +28,8 @@ const Custom500: NextPage = () => {
 								textDecorationColor="purple.600"
 								_hover={{
 									textDecorationColor: 'purple.500',
-								}}>
+								}}
+							>
 								our Discord
 							</Link>
 						</NextLink>{' '}

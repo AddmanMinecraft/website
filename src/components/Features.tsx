@@ -21,7 +21,8 @@ export const Features = () => {
 					background: 'purple.600',
 					borderRadius: '0 0 50% 50%/0 0 100% 100%',
 					transform: 'scaleX(1.5) rotate(180deg)',
-				}}></Flex>
+				}}
+			></Flex>
 			<Flex background="purple.600" px={[10, null, '200px']} flexDirection="column">
 				<Text fontSize={['3xl', null, '6xl']} fontWeight="800" mb={25}>
 					Show-off while looking good.
