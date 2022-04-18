@@ -40,7 +40,7 @@ export const BotStatistics = ({ observerData, topGGData }: BotStatsTypes) => {
 					<SimpleGrid columns={[2, null, 0]} spacing={10} spacingX="200px" display={['block', null, 'grid']}>
 						<Stat
 							statistic={
-								topGGData.server_count === '1' ? topGGData.server_count.toLocaleString() : '13,000+'
+								topGGData.server_count.toLocaleString()
 							}
 							icon={FaServer}
 							description="Servers"

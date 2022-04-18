@@ -12,13 +12,16 @@ import { ChakraProvider } from '@chakra-ui/react';
 import { AppProps } from 'next/app';
 import theme from '../theme';
 
-function MyApp({ Component, pageProps }: AppProps) {
+function App({ Component, pageProps }: AppProps) {
 	return (
 		<ChakraProvider resetCSS={true} theme={theme}>
 			<Component {...pageProps} />
-			<Script async src="https://arc.io/widget.min.js#sARimiAt" />
+			{process.env.NODE_ENV === "production" ? (<>
+                <Script async src="https://arc.io/widget.min.js#sARimiAt" />
+            </>
+            ) : null}
 		</ChakraProvider>
 	);
 }
 
-export default MyApp;
+export default App;
