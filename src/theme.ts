@@ -11,6 +11,9 @@ const fonts = {
 
 const styles = {
 	global: {
+		html: {
+			overflowX: 'hidden',
+		},
 		body: {
 			fontFamily: 'base',
 			bg: 'gray.900',
